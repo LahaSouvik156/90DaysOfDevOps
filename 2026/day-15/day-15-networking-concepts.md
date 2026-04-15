@@ -20,7 +20,7 @@
 
 3. Run: `dig google.com` — identify the A record and TTL from the output
 
-   ![Image].(https://github.com/LahaSouvik156/90DaysOfDevOps/blob/master/2026/day-15/A%20record.PNG)
+   ![image alt].(https://github.com/LahaSouvik156/90DaysOfDevOps/blob/master/2026/day-15/A%20record.PNG?raw=true)
 
    ```bash
    A Record (IP Address): 142.250.195.238 (This may vary depending on your location, e.g., 142.250.x.x).
