@@ -80,7 +80,7 @@
      ```
 
      **Output :**
-
+     ```bash
      Enter any number: 20
      Let the countdown begins....
      20
@@ -104,3 +104,135 @@
      1
      0
      Done!
+     ```
+
+---
+
+### Task 3: Command-Line Arguments
+1. Create `greet.sh` that:
+   - Accepts a name as `$1`
+   - Prints `Hello, <name>!`
+   - If no argument is passed, prints "Usage: ./greet.sh <name>"
+
+     **Code :**
+     ```bash
+     #!/bin/bash
+
+     # Script for user input with read and passing argument
+
+     read -p "Enter your name: " name
+     read -p "Enter your favourite tools name: " tool
+
+     echo "Hello $name, your favourite tool is $tool"
+     echo "Hi $name , let me introduce you with $1 and he is an $2 specialist"
+     ```
+
+     **Output**
+     ```bash
+     bash greet.sh Jason AI       # NOTE: Jason and AI are give as an argument
+     Enter your name: Jacky
+     Enter your favourite tools name: k8s
+     Hello Jacky, your favourite tool is k8s
+     Hi Jacky , let me introduce you with Jason and he is an AI specialist
+     ```
+
+---
+
+2. Create `args_demo.sh` that:
+   - Prints total number of arguments (`$#`)
+   - Prints all arguments (`$@`)
+   - Prints the script name (`$0`)
+
+     **Code :**
+     ```bash
+     #!/bin/bash
+
+     # scipt to demonstrate arguments
+
+     echo "1st argument is $1"
+     echo "2nd argument is $2"
+     echo "All arguments are $@"
+     echo "Total number of arguments are $#"
+     echo "The script name is $0"
+     ```
+
+     **Output**
+     ```bash
+     1st argument is Bash
+     2nd argument is Linux
+     All arguments are Bash Linux
+     Total number of arguments are 2
+     The script name is args_demo.sh
+     ```
+
+---
+
+### Task 4: Install Packages via Script
+1. Create `install_packages.sh` that:
+   - Defines a list of packages: `nginx`, `curl`, `wget`
+   - Loops through the list
+   - Checks if each package is installed (use `dpkg -s` or `rpm -q`)
+   - Installs it if missing, skips if already present
+   - Prints status for each package
+
+> Run as root: `sudo -i` or `sudo su`
+
+   **Code :**
+   ```bash
+   #!/bin/bash
+
+  # List of packages to install
+  PACKAGES=("nginx" "curl" "wget")
+
+  echo "Updating package list..."
+  sudo apt-get update -y
+
+  # Loop through the list
+  for package in ${PACKAGES[@]}
+  do
+    # Check if package is installed
+    if dpkg -s "$package" >/dev/null 2>&1; 
+    then
+        echo "$package is already installed. Skipping."
+    else
+        echo "$package is not installed. Installing..."
+        apt-get install -y "$package"
+        
+        # Verify installation
+        if dpkg -s "$package" >/dev/null 2>&1; then
+            echo "$package installed successfully."
+        else
+            echo "$package failed to install."
+        fi
+    fi
+ done
+ ```
+
+---
+
+
+### Task 5: Error Handling
+1. Create `safe_script.sh` that:
+   - Uses `set -e` at the top (exit on error)
+   - Tries to create a directory `/tmp/devops-test`
+   - Tries to navigate into it
+   - Creates a file inside
+   - Uses `||` operator to print an error if any step fails
+
+    **Code :**
+    ```bash
+    #!/bin/bash
+
+    set -e
+
+    mkdir /tmp/devops-test || echo "Directory already exists"
+
+    cd /tmp/devops-test || echo "Cannot enter directory"
+
+    touch testfile.txt || echo "Cannot create file"
+
+    echo "Script completed!"
+    ```
+
+
+     
