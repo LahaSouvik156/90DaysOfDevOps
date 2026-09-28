@@ -1,8 +1,8 @@
-Today’s goal is to understand how Linux works under the hood.
+# Day 02 – Linux Architecture, Processes, and systemd
 
-You will create a short note that explains:
+## Today’s goal is to understand how Linux works under the hood. You will create a short note that explains:
 
--------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------
 
 1. The core components of Linux (kernel, user space, init/systemd)
 
