@@ -1,3 +1,5 @@
+# Day 06 – Linux Fundamentals: Read and Write Text Files
+
 Today’s goal is to practice basic file read/write using only fundamental commands.
 -------------------------------------------------------------------------------------
 1. Create a file named notes.txt
@@ -16,11 +18,13 @@ Today’s goal is to practice basic file read/write using only fundamental comma
 
      $ echo "Added something new" | tee -a notes.txt
 
-4. Command to check the ouput of that file
+     Also added a something to the file with the help of vim editor.
+
+5. Command to check the ouput of that file
 
      $ cat notes.txt
 
-5. Use head and tail to read parts of the file
+6. Use head and tail to read parts of the file
 
      $ head -n 2 notes.txt
      $ tail -n 2 notes.txt
