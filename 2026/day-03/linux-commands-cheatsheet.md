@@ -1,6 +1,8 @@
-Today’s goal is to create a cheetsheet of PROCESS MANAGEMENT, FILE SYSTEM and NETWORKING
+# Day 03 – Linux Commands Practice
 
-Deatlaied discussion of commands focused on:
+## Today’s goal is to create a cheetsheet of PROCESS MANAGEMENT, FILE SYSTEM and NETWORKING
+
+### Deatlaied discussion of commands focused on:
 
 1. Process management:
 
