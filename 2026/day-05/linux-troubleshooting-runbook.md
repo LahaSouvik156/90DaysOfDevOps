@@ -1,5 +1,8 @@
+# Day 05 – Linux Troubleshooting Drill: CPU, Memory, and Logs
+
+
 Today’s goal is to run a focused troubleshooting drill.
--------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------
 
 1. Capture a quick health snapshot (OS, CPU, memory, disk, network):
 
