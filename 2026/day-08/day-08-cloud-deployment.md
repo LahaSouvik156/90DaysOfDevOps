@@ -1,5 +1,7 @@
-Day 08 – Cloud Server Setup: Docker, Nginx & Web Deployment
------------------------------------------------------------------
+# Day 08 – Cloud Server Setup: Docker, Nginx & Web Deployment
+
+## Today's goal is to **deploy a real web server on the cloud** and learn practical server management.
+
 
 Part 1: Launch Cloud Instance & SSH Access (15 minutes):
 
@@ -8,17 +10,19 @@ After running below command on local machine's terminal, our machine will connec
 
 ssh -i "pem-file" < Public DNS of EC2 Instance >
 
--------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------
 
 Part 2: Install Docker & Nginx (20 minutes)
 
-$ sudo apt-get update ( To update the Linux Machine )
+$ sudo apt update ( To update the Linux Machine )
 
-$ sudo apt-get upgrade ( To upgrade all the existing packages, links etc )
+$ sudo apt upgrade ( To upgrade all the existing packages, links etc )
 
-$ sudo apt-get install docker.io && sudo apt-get install nginx -y
+$ sudo apt install docker.io -y
 
-------------------------------------------------------------------------------------------------------------------------------------------------------
+$ sudo apt install nginx -y
+
+-----------------------------------------------------------------
 
 Part 3: Security Group Configuration (10 minutes)
 
@@ -26,7 +30,7 @@ Test Web Access:
 
 Open security groups-> Edit inbound rules-> Enable port number 80 ( nginx run on port 80 )
 
--------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------
 
 Part 4: Extract Nginx Logs 
 
