@@ -1,3 +1,5 @@
+# Day 04 – Linux Practice: Processes and Services
+
 Today’s goal is to practice Linux fundamentals with real commands.
 
 Check running processes , try a commannd and check the PID of it & kill it:
