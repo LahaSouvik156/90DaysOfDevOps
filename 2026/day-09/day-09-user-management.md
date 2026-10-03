@@ -1,19 +1,21 @@
-Day 09 – Linux User & Group Management Challenge
-____________________________________________________________
+# Day 09 – Linux User & Group Management Challenge
 
-Task 1: Create three users (berlin, tokyo and professor) with home directories and passwords:
 
-$ sudo useradd -m -s /bin/bash berlin && echo "berlin:password" | sudo chpasswd
+## Task 1: Create three users (berlin, tokyo and professor) with home directories and passwords:
 
-$ sudo useradd -m -s /bin/bash tokyo && echo "tokyo:password" | sudo chpasswd
+$ sudo useradd -m -s /bin/bash berlin 
 
-$ sudo useradd -m -s /bin/bash professor && echo "professor:password" | sudo chpasswd
+$ sudo passwd berlin (Then we can set the password for user berlin)
+
+$ sudo useradd -m -s /bin/bash tokyo && echo "tokyo:test@123" | sudo chpasswd
+
+$ sudo useradd -m -s /bin/bash professor && echo "professor:test@123" | sudo chpasswd
 
 To verify $ cat /etc/passwd
 
-____________________________________________________________________________________________________________________________________________________
+-----------------------------------------------------
 
-Task 2: Create two groups developers and admins:
+## Task 2: Create two groups developers and admins:
 
 $ sudo groupadd developers
 
@@ -21,10 +23,10 @@ $ sudo groupadd admins
 
 To verify $ cat /etc/group
 
-_______________________________________________________________________________________________________________________________________________________
+------------------------------------------------
 
 
-Task 3: Assign Users to Groups: 
+## Task 3: Assign Users to Groups: 
 
 tokyo → developers:   $ sudo gpasswd -a tokyo developers
 
@@ -32,13 +34,13 @@ berlin → developers + admins (both groups):   $ sudo usermod -aG developers,ad
 
 professor → admins:   $ sudo usermod -aG admins professor
 
-_______________________________________________________________________________________________________________________________________________________
+----------------------------------------------------------
 
-Task 4: Shared Directory:
+## Task 4: Shared Directory:
 
 1. Create directory: /opt/dev-project:   $ sudo mkdir /opt/dev-project
 
-2. Set group owner to developers:   $ sudo chown developers /opt/dev-project
+2. Set group owner to developers:   $ sudo chgrp developers /opt/dev-project
 
 3. Set permissions to 775:   $ sudo chmod 775 /opt/dev-project
 
@@ -54,11 +56,11 @@ Task 4: Shared Directory:
 
   Simillarly we can login as a berlin user and create demofile_02.txt
 
-  _________________________________________________________________________________________________________________________________________________________
+  ------------------------------------------------------------------
 
-  Task 5: Team Workspace:
+  ## Task 5: Team Workspace:
 
-  1. Create user nairobi with home directory:   $ sudo useradd -m -s /bin/bash nairobi && echo "nairobi:password" | sudo chpasswd
+  1. Create user nairobi with home directory:   $ sudo useradd -m -s /bin/bash nairobi && echo "nairobi:test@123" | sudo chpasswd
 
   2. Create group project-team:   $ sudo groupadd projetc-team
 
@@ -68,7 +70,7 @@ Task 4: Shared Directory:
 
   5. Set group to project-team, permissions to 775:
 
-       $ sudo chown project-team /opt/team-workspace
+       $ sudo chgrp project-team /opt/team-workspace
 
        $ sudo chmod 775 /opt/team-workspace
 
