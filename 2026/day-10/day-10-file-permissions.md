@@ -1,5 +1,4 @@
-Day 10 – File Permissions & File Operations Challenge
-_______________________________________________________
+# Day 10 – File Permissions & File Operations Challenge
 
 Task 1: Create Files 
 
@@ -12,14 +11,14 @@ Task 1: Create Files
 3. Create script.sh using vim with content: echo "Hello DevOps"                                   
    $ vim script.sh : after that we can write bash command inside the file.
 
-________________________________________________________________________________________________________________________________________________________________
+_________________________________________
 
 Task 2: Read Files
 
 1. Read notes.txt using cat                               
    $ cat notes.txt
 
-2. View script.sh in vim read-only mode                      
+2. View script.sh in read-only mode                      
    $ cat script.sh
 
 3. Display first 5 lines of /etc/passwd using head                   
@@ -28,7 +27,7 @@ Task 2: Read Files
 4. Display last 5 lines of /etc/passwd using tail                
    $ cat /etc/passwd | tail -n 5
 
-______________________________________________________________________________________________________________________________________________________________
+_____________________________________________
 
 Task 3: Understand Permissions
 
@@ -38,7 +37,7 @@ Check your files: ls -l devops.txt notes.txt script.sh
 
    => In all 3 files Owner and Group has read and write permission. Other user has read permission.
 
-_______________________________________________________________________________________________________________________________________________________________
+__________________________________________________
 
 Task 4: Modify Permissions
 
@@ -51,7 +50,7 @@ Task 4: Modify Permissions
 3. Set notes.txt to 640 (owner: rw, group: r, others: none)
    $ sudo chmod 640 notes.txt
 
-______________________________________________________________________________________________________________________________________________________________
+_________________________________________________________
 
 Task 5: Test Permissions
 
