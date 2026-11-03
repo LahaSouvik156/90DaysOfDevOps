@@ -9,8 +9,8 @@ Take a **one-day pause** to consolidate everything from Days 01–11 so you don�
 - `chmod` / `chown` → To change the file/directory permission and ownership.  
 
 **2. How do you check if a service is healthy? List the exact 2–3 commands you’d run first.**  
-- `systemctl status <service>` → Check if the service is active and running.  
-- `journalctl -u <service> -n 50` → View the latest logs for errors or warnings.  
+- `systemctl status <service>` → To check if the service is active and running.  
+- `journalctl -u <service> -n 50` → To view the latest logs for errors or warnings.  
 - `curl -I localhost` → This confirms the service is actually responding to requests.
 
 **3. How do you safely change ownership and permissions without breaking access? Give one example command.**  
