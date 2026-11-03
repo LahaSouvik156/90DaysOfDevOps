@@ -124,6 +124,6 @@ ___
    - `blueprints.pdf` → owner: `berlin`, group: `tech-team`
    - `escape-plan.txt` → owner: `nairobi`, group: `vault-team`
 
-   $ sudo chown tokyo:vault-team access-codes.txt                
-   $ sudo chown berlin:tech-team blueprints.pdf                          
-   $ sudo chown nairobi:vault-team escape-plan.txt
+   $ sudo chown tokyo:vault-team bank-heist/access-codes.txt                
+   $ sudo chown berlin:tech-team bank-heist/blueprints.pdf                          
+   $ sudo chown nairobi:vault-team bank-heist/escape-plan.txt
