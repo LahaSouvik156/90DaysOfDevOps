@@ -7,25 +7,25 @@ Learn LVM to manage storage flexibly – create, extend, and mount volumes.
 
 ### Task 1: Create a virtul disk
 
-Firt we need to switch to the root user by using command:  sudo su
+First we need to switch to the root user by using command:  sudo su
 
 Then we can create a virtula disk by using the below command
 
 ```bash
-dd if=/dev/zero of=/tmp/disk1.img bs=1M count=1024
-losetup -fP /tmp/disk1.img
-losetup -a   # Note the device name (e.g., /dev/loop0)
+dd if=/dev/zero of=/mnt/testers/disk1.img bs=1M count=1024      # /tmp directory has not enough space so used /mnt/testers
+losetup -fP /mnt/testers/disk1.img
+losetup -a   # Note the device name (e.g., /dev/loop6)
 ```
 
 ### Task 2: Create a physical volume
 ```bash
-pvcreate /dev/loop0    # To create a Phyiscal volume
+pvcreate /dev/loop6   # To create a Phyiscal volume
 pvs    # To check the details of Phyiscal volume 
 ```
 
 ### Task 3: Create Volume Group
 ```bash
-vgcreate devops_vg /dev/loop0    # To create a vloume group
+vgcreate devops_vg /dev/loop6    # To create a vloume group
 vgs    # To check the details of vloume group
 ```
 
