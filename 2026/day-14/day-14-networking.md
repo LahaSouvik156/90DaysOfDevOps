@@ -26,7 +26,7 @@
 
    **Observation:**
 
-       Avg latency: ~10019 ms
+       Avg latency: ~55 ms
        Packet loss: 0%
 
 3. **Path:** `traceroute google.com` (or `tracepath`) — note any long hops/timeouts.
